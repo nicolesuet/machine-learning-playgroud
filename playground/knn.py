@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 
@@ -32,3 +32,5 @@ matrix = confusion_matrix(Y_test, y_pred)
 
 print(report)
 print(matrix)
+
+print(accuracy_score(Y_test, y_pred))
